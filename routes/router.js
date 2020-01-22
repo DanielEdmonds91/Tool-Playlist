@@ -5,7 +5,10 @@ const db = require('../db')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  res.send('test')
+  db.getAlbums()
+    .then(albums => {
+      res.render('albumsView', {albums:albums})
+    })
 })
 
 module.exports = router
