@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-  <title>Tool Albums</title>
-</head>
-
-<body>
   <ul>
     {{#each albums}}
-    <li>{{title}} ({{year}})</li>
+    <li><a href="/album/{{id}}">{{title}} ({{year}})</a></li>
     {{/each}}
   </ul>
-</body>
 
-</html>
+  <ul>
+    <li><a href="/songs">All songs</a></li>
+  </ul>
+
